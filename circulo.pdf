@@ -1,0 +1,66 @@
+<html>
+<head><title>ball html5</title></head>
+<body>
+ <canvas id="c" width="600" height="600"></canvas>
+ <script type="text/javascript">
+ 
+ var canvas, ctx;
+ 
+ function drawBall(x,y,r,color){
+  ctx.fillStyle = color;
+  ctx.beginPath();
+  ctx.arc(x, y, r, 0, Math.PI*2, true);
+  ctx.closePath();
+  ctx.fill();
+ }
+
+ function clear(){
+  canvas.width =  canvas.width;
+ }
+ 
+ function init(){
+  canvas = document.getElementById("c");
+  ctx = canvas.getContext("2d");
+  setInterval(loop, 1000/30);
+ }
+ 
+ function loop(){
+  clear();
+  drawBall(100,100,10,"#00ffff");
+  drawBall(150,100,10,"#00ffff");
+  drawBall(200,100,10,"#00ffff");
+
+ drawBall(100,150,10,"#00ffff");
+ drawBall(150,150,10,"#00ffff");
+ drawBall(200,150,10,"#ff0000");
+
+ drawBall(100,200,10,"#00ffff");
+ drawBall(150,200,10,"#ff0000");
+ drawBall(200,200,10,"#00ffff");
+
+ drawBall(100,250,10,"#00ffff");
+ drawBall(150,250,10,"#ff0000");
+ drawBall(200,250,10,"#ff0000");
+
+ drawBall(100,300,10,"#ff0000");
+ drawBall(150,300,10,"#00ffff");
+ drawBall(200,300,10,"#00ffff");
+
+ drawBall(100,350,10,"#ff0000");
+ drawBall(150,350,10,"#00ffff");
+ drawBall(200,350,10,"#ff0000");
+
+ drawBall(100,400,10,"#ff0000");
+ drawBall(150,400,10,"#ff0000");
+ drawBall(200,400,10,"#00ffff");
+
+ drawBall(100,450,10,"#ff0000");
+ drawBall(150,450,10,"#ff0000");
+ drawBall(200,450,10,"#ff0000");
+ }
+ 
+ window.onload = init;
+  
+ </script>
+</body>
+</html>

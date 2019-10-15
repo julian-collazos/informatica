@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>cuadrado canvas</title>
+<style>
+
+#lienzo{
+   background-color:#f00;
+}
+
+section{
+     width:500px;
+     
+     margin:auto;
+}
+</style>
+
+<script>
+
+function comenzar(){
+
+var elemento=document.getElementById("lienzo"); 
+
+lienzo=elemento.getContext("2d");
+
+lienzo.fillStyle="#00ffff";
+
+lienzo.fillRect (110,110,80,80);
+
+lienzo.fillStyle="black";
+
+lienzo.fillRect (110,20, 80,80);
+
+lienzo.fillStyle="magenta";
+
+lienzo.fillRect (200,20, 80,80);
+
+
+}
+
+window.addEventListener("load",comenzar,false)
+
+
+
+
+
+</script>
+</head>
+
+<body>
+<section id="dibujo">
+<canvas id="lienzo" width="500" height="500">
+
+
+</canvas>
+
+<p> lienzo es el "nombre" por decirlo de alguna manera del canvas, donde dibujaremos los cuadrados por separado, la section es en que parte se va posicionar el lienzo, el cual tiene sus medidas definidas en canvas
+el script define que se va a hacer en javascript. la funcion comenzar es en la que se define que se va a dibujar en el lienzo. se llama en window.addEventListener lo que
+hace que el codigo le perte atención a la funcion comenzar.
+
+http://lineadecodigo.com/html5/crear-una-cuadricula-sobre-un-canvas-de-html5/ para estudiar cuadriculas
+</p>
+</body>
+</html>
